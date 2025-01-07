@@ -1,14 +1,13 @@
 const express = require('express')
-
+require('dotenv').config()
 const app = express()
 
-const port = 4000
 
 app.get('/' ,(req,res)=>{
     res.send("hello social media app")
 })
 
-app.listen(port, ()=>
+app.listen(process.env.PORT, ()=>
 {
-    console.log(`app listing on port ${port}`);
+    console.log(`app listing on port ${process.env.PORT}`);
 })
